@@ -1,10 +1,17 @@
 pipeline {
   agent { label "${LABEL_NAME}" }
 
+  environment {
+    $IMAGE_NAME= "myimage"
+    $IMAGE_TAG= "$BUILD_NUMBER"
+    $CONTAINER_NAME= "mycont"
+    $DOCKER_CREDS= "credentials(dockerhub_creds)
+}
+
   stages {
     stage("Code") {
       steps {
-        git url:"", branch:"main"
+        git url:"https://github.com/Qazaidi123/dockerimagepush.git", branch:"main"
 }
 }
     stage("Build") {

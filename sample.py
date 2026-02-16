@@ -1,6 +1,6 @@
 from flask import Flask
 
-app = FLASK(__name__)
+app = Flask(__name__)
 
 def normal_function():
   return "This will deploy on the agent server"

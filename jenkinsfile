@@ -5,7 +5,7 @@ pipeline {
     IMAGE_NAME = "myimage"
     IMAGE_TAG = "${BUILD_NUMBER}"
     CONTAINER_NAME = "mycont"
-    DOCKER_CREDS = credentials('dockerhub-creds')
+    DOCKER_CREDS = credentials('dockerhub_cred')
     
   }
 

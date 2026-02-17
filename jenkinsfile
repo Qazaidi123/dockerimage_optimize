@@ -52,7 +52,7 @@ pipeline {
 
     stage ('Archive Artifacts') {
       steps {
-        archiveArtifacts artifacts: 'Artifacts to archive: target/*.jar Fingerprint artifacts: true', followSymlinks: false
+        archiveArtifacts artifacts: 'target/*.jar', Fingerprint: true
        }
     }
   }

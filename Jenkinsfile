@@ -49,6 +49,7 @@ pipeline {
         
         docker run -d --name $FRONT_CONTAINER -p 90:5000 $FRONT_IMAGE:$IMAGE_TAG
         docker run -d --name $BACK_CONTAINER -p 90:5000 $BACK_IMAGE:$IMAGE_TAG
+        '''
       }
     }
 

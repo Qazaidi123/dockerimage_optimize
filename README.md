@@ -63,7 +63,7 @@ Alpine image optimization
 # (1) Image Size
 
 ## Image size-DockerHUb
-![DockerHub](screenshots/backendimage.jpg)
+![DockerHub](screenshots/Dockerhub_backendimage.jpg)
 
 ![DockerHub_Frontend](screenshots/Dockerhub_frontendimage.jpg)
 

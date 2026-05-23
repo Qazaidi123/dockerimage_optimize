@@ -63,18 +63,18 @@ Alpine image optimization
 # (1) Image Size
 
 ## Image size-DockerHUb
-![DockerHub](screenshots/Dockerhub_backendimage.jpg)
+![DockerHub](screeshots/Dockerhub_backendimage.jpg)
 
-![DockerHub_Frontend](screenshots/Dockerhub_frontendimage.jpg)
+![DockerHub_Frontend](screeshots/Dockerhub_frontendimage.jpg)
 
 # (2) Diskspace by images on EC2
-![Disk_space](screenshots/images_diskspace.jpg)
+![Disk_space](screeshots/images_diskspace.jpg)
 
 # (3) Pipeline with and without Alpine images
-![Pipeline_time](screenshots/pipeline.jpg)
+![Pipeline_time](screeshots/pipeline.jpg)
 
 #  Parellalization Optimization
-![Parellal_run](screenshots/parellel_run.jpg)
+![Parellal_run](screeshots/parellel_run.jpg)
 
 
 

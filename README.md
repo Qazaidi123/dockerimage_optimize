@@ -40,8 +40,9 @@ and is for learning purpose, but in real projects the alpine images may have big
 # (2) By Parellalization (Very Effective):
 Jenkins Pipeline optimization is also done by parellel run of independent stages. For e.g in Jenkinsfile Image build stage, frondend and backend image build is sequential i.e once the frontend image build is completed then only the backend build will start. Similary in Container run (Deploy), backend container run will start after the frontend container will be completed.
 But in parellal run (jenkinsfile), frontend and backend image build will run parellal, similalry container run of both will also processed parellel. Therefore pipeline will take less time to complete.
-In my case
+
 Time taken by pipeline (Jenkinsfile) without parellel run:53s , 
+
 Time taken by pipeline (jenkinsfile) with parellel run: 17s
 
 

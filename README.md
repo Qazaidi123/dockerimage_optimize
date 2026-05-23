@@ -10,7 +10,7 @@ Image layer size : 3.69 MB  (First Layer: ADD alpine-minirootfs-3.23.4-x86_64.ta
 Disk usage in EC2: 62.4 MB
 
 
-# Backend Dockerfile with apine: FROM php-cli-alpine  (Image name: qazaidi123/myimage:2) - backend
+# Backend Dockerfile with alpine: FROM php-cli-alpine  (Image name: qazaidi123/myimage:8) - backend
 Total Image size: 35.18 MB ,   
 
 Image layer size : 3.69 MB  (First Layer: ADD alpine-minirootfs-3.23.4-x86_64.tar.gz / # buildkit) , 

@@ -6,7 +6,7 @@ pipeline {
     IMAGE_NAME = "qazaidi123/myimage"
     IMAGE_TAG = "${BUILD_NUMBER}"
     CONTAINER_NAME = "optimize"
-    DOCKER_CREDS = credentials('dockerhub_cred')
+    DOCKER_CREDS = credentials('dockerhub-creds')
     
   }
 

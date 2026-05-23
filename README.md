@@ -1,5 +1,7 @@
 This GitRepo reflects the Jenkinspipeline optimization by - (1) Alpine images (2) Parellel run of independent stages
 
+# (1) By Alpine Images
+
 # Frontend Dockerfile with alpine: FROM nginx:alpine (Image name: qazaidi123/myimage2:8) - frontend 
 Total Image size: 24.87 MB         
 Image layer size : 3.69 MB  (First Layer: ADD alpine-minirootfs-3.23.4-x86_64.tar.gz / # buildkit)
@@ -25,6 +27,13 @@ Disk usage in EC2: 525 MB
 # Jenkins pipeline stage time consumption
 Image build stage from Dockerfile with alpine images:    1s
 Image build stage from Dockerfile without alpine images: 19s
+
+# (2) By Parellalization (Very Effective):
+Jenkins Pipeline optimization is also done by parellel run of independent stages. For e.g in Jenkinsfile Image build stage, frondend and backend image build is sequential i.e once the frontend image build is completed then only the backend build will start. Similary in Container run (Deploy), backend container run will start after the frontend container will be completed.
+But in parellal run (jenkinsfile), frontend and backend image build will run parellal, similalry container run of both will also processed parellel. Therefore pipeline will take less time to complete.
+In my case
+Time taken by pipeline (Jenkinsfile) without parellel run:53s
+Time taken by pipeline (jenkinsfile) with parellel run: 17s
 
 Container build (Deploy) stage from Dockerfile with alpine images: 836ms
 Container build (Deploy) stage from Dockerfile with alpine images: 1s

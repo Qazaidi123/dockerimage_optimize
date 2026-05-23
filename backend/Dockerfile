@@ -1,6 +1,8 @@
-FROM php:8.2-apache-alpine
+FROM php:8.2-cli-alpine
 
 RUN docker-php-ext-install mysqli
+
+RUN apt update && apt install apache:latest
 
 # Enable rewrite (optional but safe)
 RUN a2enmod rewrite

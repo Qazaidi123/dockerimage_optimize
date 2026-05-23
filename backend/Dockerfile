@@ -1,11 +1,18 @@
-FROM python:3.11-alpine
+FROM php:8.2-apache-alpine
 
-WORKDIR /net
+RUN docker-php-ext-install mysqli
 
-RUN pip install flask
+# Enable rewrite (optional but safe)
+RUN a2enmod rewrite
 
-COPY sample.py .
+# Copy only backend code
+COPY . /var/www/html/
 
-EXPOSE 5000
+# Permissions
+RUN chmod -R 755 /var/www/html
+RUN chown -R www-data:www-data /var/www/html
 
-CMD ["python", "sample.py"]
+# Enable .htaccess
+RUN sed -i 's/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf
+
+EXPOSE 80

@@ -16,7 +16,7 @@ pipeline {
 
     stage("Code") {
       steps {
-        git url: "https://github.com/Qazaidi123/dockerimagepush.git", branch: "main"
+        git url: "https://github.com/Qazaidi123/dockerimage_optimize.git", branch: "main"
       }
     }
 

@@ -37,7 +37,7 @@ pipeline {
       steps {
         sh "docker stop $CONTAINER_NAME || true"
         sh "docker rm $CONTAINER_NAME || true"
-        sh "docker run -d --name $CONTAINER_NAME -p 80:5000 $IMAGE_NAME:$IMAGE_TAG"
+        sh "docker run -d --name $CONTAINER_NAME -p 80:3000 $IMAGE_NAME:$IMAGE_TAG"
       }
     }
 

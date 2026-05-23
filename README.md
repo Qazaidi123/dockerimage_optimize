@@ -26,12 +26,15 @@ Disk usage in EC2: 525 MB
 
 # Jenkins pipeline stage time consumption
 Image build stage from Dockerfile with alpine images:    1s , 
+
 Image build stage from Dockerfile without alpine images: 19s , 
 
 Container build (Deploy) stage from Dockerfile with alpine images: 836ms , 
+
 Container build (Deploy) stage from Dockerfile with alpine images: 1s , 
 
 Total Time consumption by pipeline with alpine image: 34s , 
+
 Total Time consumption by pipeline with alpine image: 53s , 
 
 Here the diffrence in time is not too much because the GitRepo, Dockerfiles and Jenkinsfile is kept simple

@@ -14,7 +14,7 @@ pipeline {
 
   stages {
 
-    stage("Code") {
+    stage("Gitrepo clone") {
       steps {
         git url: "https://github.com/Qazaidi123/dockerimage_optimize.git", branch: "main"
       }

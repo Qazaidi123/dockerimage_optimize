@@ -1,16 +1,11 @@
 pipeline {
-  agent { label "${LABEL_NAME}" }
+  agent any
 
-  options {
-   timestamps()
-   buildDiscarder (logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '1', numToKeepStr: '2'))
-}
-
-
+  
   environment {
     IMAGE_NAME = "qazaidi123/myimage"
     IMAGE_TAG = "${BUILD_NUMBER}"
-    CONTAINER_NAME = "mycont"
+    CONTAINER_NAME = "optimize"
     DOCKER_CREDS = credentials('dockerhub_cred')
     
   }
@@ -29,11 +24,7 @@ pipeline {
       }
     }
 
-    stage("Image_Check") {
-      steps {
-        sh "trivy image --severity CRITICAL --exit-code 0 $IMAGE_NAME:$IMAGE_TAG"
-      }
-    }
+    
 
     stage("Image_Push") {
       steps {
@@ -50,11 +41,7 @@ pipeline {
       }
     }
 
-    stage ('Archive Artifacts') {
-      steps {
-        archiveArtifacts artifacts: 'target/artifacts.txt', fingerprint: true
-       }
-    }
+    
   }
 }
 

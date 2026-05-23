@@ -3,8 +3,8 @@ pipeline {
 
   
   environment {
-    FRONT_IMAGE = "qazaidi123/myimage2"
-    BACK_IMAGE = "qazaidi123/myimage"
+    FRONT_IMAGE = "qazaidi123/frontopt"
+    BACK_IMAGE = "qazaidi123/backopt"
     FRONT_CONTAINER = "optimize-front"
     BACK_CONTAINER = "optimize-back"
     IMAGE_TAG = "${BUILD_NUMBER}"

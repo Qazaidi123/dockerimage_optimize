@@ -29,6 +29,9 @@ Image build stage from Dockerfile without alpine images: 19s
 Container build (Deploy) stage from Dockerfile with alpine images: 836ms
 Container build (Deploy) stage from Dockerfile with alpine images: 1s
 
-Here the diffrence is looking to be not too much because the GitRepo, Dockerfiles and Jenkinsfile is kept simmple
+Total Time consumption by pipeline with alpine image: 34s
+Total Time consumption by pipeline with alpine image: 53s
+
+Here the diffrence in time is not too much because the GitRepo, Dockerfiles and Jenkinsfile is kept simple
 and is for learning purpose, but in real projects the alpine images may have big diffrence in time consumption of pipeline run.
 

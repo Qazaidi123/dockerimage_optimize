@@ -74,7 +74,7 @@ Alpine image optimization
 ![Pipeline_time](screeshoot/pipeline.jpg)
 
 #  Parellalization Optimization
-![Parellal_run](screeshoot/parellel_run.jpg)
+![Parellal_run](screeshoot/parellal_run.jpg)
 
 
 

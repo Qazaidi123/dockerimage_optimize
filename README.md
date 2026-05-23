@@ -18,14 +18,14 @@ Image layer size : 3.69 MB  (First Layer: ADD alpine-minirootfs-3.23.4-x86_64.ta
 Disk usage in EC2: 100 MB
 
 
-# Frontend Dockerfile without alpine: FROM nginx:latest (Image name: qazaidi123/myimage2:9) - frontend
+# Frontend Dockerfile without alpine: FROM nginx:latest (Image name: qazaidi123/frontopt:10) - frontend
 Total Image size: 60.18 MB , 
 
 Image layer size : 28.4 MB  (First Layer: debian.sh --arch 'amd64' out/) , 
 
 Disk usage in EC2: 161 MB
 
-# Backend Dockerfile without apine: FROM php-cli-alpine  (Image name: qazaidi123/myimage:9) - backend
+# Backend Dockerfile without apine: FROM php-cli-alpine  (Image name: qazaidi123/backopt:10) - backend
 Total Image size: 171.35 MB ,     
 
 Image layer size : 28.4 MB  (First Layer: debian.sh --arch 'amd64' out/) , 

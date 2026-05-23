@@ -28,13 +28,6 @@ Disk usage in EC2: 525 MB
 Image build stage from Dockerfile with alpine images:    1s
 Image build stage from Dockerfile without alpine images: 19s
 
-# (2) By Parellalization (Very Effective):
-Jenkins Pipeline optimization is also done by parellel run of independent stages. For e.g in Jenkinsfile Image build stage, frondend and backend image build is sequential i.e once the frontend image build is completed then only the backend build will start. Similary in Container run (Deploy), backend container run will start after the frontend container will be completed.
-But in parellal run (jenkinsfile), frontend and backend image build will run parellal, similalry container run of both will also processed parellel. Therefore pipeline will take less time to complete.
-In my case
-Time taken by pipeline (Jenkinsfile) without parellel run:53s
-Time taken by pipeline (jenkinsfile) with parellel run: 17s
-
 Container build (Deploy) stage from Dockerfile with alpine images: 836ms
 Container build (Deploy) stage from Dockerfile with alpine images: 1s
 
@@ -43,4 +36,13 @@ Total Time consumption by pipeline with alpine image: 53s
 
 Here the diffrence in time is not too much because the GitRepo, Dockerfiles and Jenkinsfile is kept simple
 and is for learning purpose, but in real projects the alpine images may have big diffrence in time consumption of pipeline run.
+
+# (2) By Parellalization (Very Effective):
+Jenkins Pipeline optimization is also done by parellel run of independent stages. For e.g in Jenkinsfile Image build stage, frondend and backend image build is sequential i.e once the frontend image build is completed then only the backend build will start. Similary in Container run (Deploy), backend container run will start after the frontend container will be completed.
+But in parellal run (jenkinsfile), frontend and backend image build will run parellal, similalry container run of both will also processed parellel. Therefore pipeline will take less time to complete.
+In my case
+Time taken by pipeline (Jenkinsfile) without parellel run:53s
+Time taken by pipeline (jenkinsfile) with parellel run: 17s
+
+
 

@@ -2,7 +2,7 @@ This GitRepo reflects the Jenkinspipeline optimization by - (1) Alpine images (2
 
 # (1) By Alpine Images
 
-# Frontend Dockerfile with alpine: FROM nginx:alpine (Image name: qazaidi123/myimage2:8) - frontend 
+# Frontend Dockerfile with alpine: FROM nginx:alpine (Image name: qazaidi123/frontopt:4) - frontend 
 Total Image size: 24.87 MB , 
 
 Image layer size : 3.69 MB  (First Layer: ADD alpine-minirootfs-3.23.4-x86_64.tar.gz / # buildkit) , 
@@ -10,7 +10,7 @@ Image layer size : 3.69 MB  (First Layer: ADD alpine-minirootfs-3.23.4-x86_64.ta
 Disk usage in EC2: 62.4 MB
 
 
-# Backend Dockerfile with alpine: FROM php-cli-alpine  (Image name: qazaidi123/myimage:8) - backend
+# Backend Dockerfile with alpine: FROM php-cli-alpine  (Image name: qazaidi123/backopt:4) - backend
 Total Image size: 35.18 MB ,   
 
 Image layer size : 3.69 MB  (First Layer: ADD alpine-minirootfs-3.23.4-x86_64.tar.gz / # buildkit) , 

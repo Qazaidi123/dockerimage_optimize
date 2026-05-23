@@ -23,7 +23,7 @@ pipeline {
     stage("Build") {
       steps {
         sh '''
-        docker build -t $FRONT_IMAGE:$IMAGE_TAG ./frontend
+        docker build -t $FRONT_IMAGE:$IMAGE_TAG ./fontend
         docker build -t $BACK_IMAGE:$IMAGE_TAG ./backend
         '''
       }

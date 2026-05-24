@@ -54,21 +54,25 @@ Time taken by pipeline (jenkinsfile) with parellel run: 17s
 
 
 # Screenshots: 
-## Pipeline optimization by using Alpine image
 
+DockerHub-Frontend
 
 ![DockerHub_frontend](screenshots/DH-front.jpg)
 
-Frontend Image
+DockerHub-Backend
+
 ![DockerHub_backend](screenshots/DH-back.jpg)
 
-# (2) Diskspace by images on EC2
+Diskspace usage by Images- Alpine vs normal Images
+
 ![Disk_space](screenshots/images.jpg)
 
-# (3) Pipeline with and without Alpine images
+ Pipeline time consumptiom with and without Alpine images
+ 
 ![Pipeline_time](screenshots/pipeline.jpg)
 
-#  Parellalization Optimization
+Parallelization Pipeline time
+
 ![Parellal_run](screenshots/parallel.jpg)
 
 

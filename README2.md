@@ -65,7 +65,7 @@ DockerHub-Backend
 
 Diskspace usage by Images- Alpine vs normal Images
 
-![Disk_space](screenshots/images.jpg)
+![Disk_space](screenshots/Images.jpg)
 
  Pipeline time consumptiom with and without Alpine images
  

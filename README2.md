@@ -56,8 +56,7 @@ Time taken by pipeline (jenkinsfile) with parellel run: 17s
 # Screenshots: 
 ## Pipeline optimization by using Alpine image
 
-## Image size-DockerHUb
-Backened Image
+
 ![DockerHub_frontend](screenshots/DH-front.jpg)
 
 Frontend Image

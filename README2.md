@@ -1,6 +1,22 @@
-This GitRepo reflects the Jenkinspipeline optimization by - (1) Alpine images (2) Parellel run of independent stages
+# "This repository demonstrates Jenkins pipeline optimization techniques using Alpine-based Docker images and parallel execution of independent stages.”
 
-# (1) By Alpine Images
+The goal is to reduce:
+- Docker image size
+  
+- Pipeline execution time
+  
+- EC2 disk usage
+
+  # Tech Stack
+- Jenkins
+- Docker
+- DockerHub
+- Nginx
+- PHP
+- AWS EC2
+- GitHub
+
+# (1) Optimization - Alpine Images
 
 # Frontend Dockerfile with nginx:alpine (Image name: qazaidi123/frontimage:1) 
 Total Image size: 24.83 MB , 

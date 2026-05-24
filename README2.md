@@ -61,6 +61,14 @@ Jenkins Pipeline optimization is also done by parellel run of independent stages
 
 - Parellel run: 17s
 
+# Jenkins Pipeline Features
+- GitHub integration
+- Automated Docker image build
+- Parallel frontend/backend image builds
+- DockerHub image push
+- Automated container deployment
+- CI/CD runtime optimization
+
 # Key Learnings
 - Alpine images reduce Docker image size and storage consumption.
 - Smaller images improve pipeline efficiency.

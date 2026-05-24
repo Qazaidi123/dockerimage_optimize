@@ -2,7 +2,7 @@ This GitRepo reflects the Jenkinspipeline optimization by - (1) Alpine images (2
 
 # (1) By Alpine Images
 
-# Frontend Dockerfile with nginx:alpine: FROM nginx:alpine (Image name: qazaidi123/frontimage:1) 
+# Frontend Dockerfile with nginx:alpine (Image name: qazaidi123/frontimage:1) 
 Total Image size: 24.83 MB , 
 
 Image layer size : 3.69 MB  (First Layer: ADD alpine-minirootfs-3.23.4-x86_64.tar.gz / # buildkit) , 
@@ -10,7 +10,7 @@ Image layer size : 3.69 MB  (First Layer: ADD alpine-minirootfs-3.23.4-x86_64.ta
 Disk usage in EC2: 62.3 MB
 
 
-# Backend Dockerfile with php:8.2-cli-alpine: FROM php-cli-alpine  (Image name: qazaidi123/backimage:1) 
+# Backend Dockerfile with php:8.2-cli-alpine (Image name: qazaidi123/backimage:1) 
 Total Image size: 35.18 MB ,   
 
 Image layer size : 3.69 MB  (First Layer: ADD alpine-minirootfs-3.23.4-x86_64.tar.gz / # buildkit) , 
@@ -18,14 +18,14 @@ Image layer size : 3.69 MB  (First Layer: ADD alpine-minirootfs-3.23.4-x86_64.ta
 Disk usage in EC2: 100 MB
 
 
-# Frontend Dockerfile without alpine: FROM nginx:latest (Image name: qazaidi123/frontopt:5) - frontend
+# Frontend Dockerfile without alpine --> nginx:latest (Image name: qazaidi123/frontimage:2) 
 Total Image size: 60.18 MB , 
 
 Image layer size : 28.4 MB  (First Layer: debian.sh --arch 'amd64' out/) , 
 
 Disk usage in EC2: 161 MB
 
-# Backend Dockerfile without apine: FROM php-cli-alpine  (Image name: qazaidi123/backopt:5) - backend
+# Backend Dockerfile without apine --> php:8.2  (Image name: qazaidi123/backimage:2) 
 Total Image size: 171.35 MB ,     
 
 Image layer size : 28.4 MB  (First Layer: debian.sh --arch 'amd64' out/) , 
@@ -35,15 +35,11 @@ Disk usage in EC2: 525 MB
 # Jenkins pipeline stage time consumption
 Image build stage from Dockerfile with alpine images:    857ms , 
 
-Image build stage from Dockerfile without alpine images: 19s , 
-
-Container build (Deploy) stage from Dockerfile with alpine images: 1s , 
-
-Container build (Deploy) stage from Dockerfile with alpine images: 1s , 
+Image build stage from Dockerfile without alpine images: 20s , 
 
 Total Time consumption by pipeline with alpine image: 23s , 
 
-Total Time consumption by pipeline with alpine image: 53s , 
+Total Time consumption by pipeline with alpine image: 39s , 
 
 Here the diffrence in time is not too much because the GitRepo, Dockerfiles and Jenkinsfile is kept simple
 and is for learning purpose, but in real projects the alpine images may have big diffrence in time consumption of pipeline run.

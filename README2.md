@@ -82,23 +82,23 @@ Jenkins Pipeline optimization is also done by parellel run of independent stages
 
 DockerHub-Backend
 
-![DockerHub_frontend](screenshots/DockerHubBack.jpg)
+![DockerHub_frontend](screenshots/DockerHubBack.png)
 
 DockerHub-Frontend
 
-![DockerHub_backend](screenshots/DockerHubFront.jpg)
+![DockerHub_backend](screenshots/DockerHubFront.png)
 
 Diskspace usage by Images- Alpine vs normal Images
 
-![Disk_space](screenshots/EC2images.jpg)
+![Disk_space](screenshots/EC2images.png)
 
  Pipeline time consumptiom with and without Alpine images
  
-![Pipeline_time](screenshots/pipelineImageOpt.jpg)
+![Pipeline_time](screenshots/pipelineImageOpt.png)
 
 Parallelization Pipeline time
 
-![Parellal_run](screenshots/parallel.jpg)
+![Parellal_run](screenshots/parallel.png)
 
 
 

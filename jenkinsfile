@@ -5,8 +5,8 @@ pipeline {
   environment {
     FRONT_IMAGE = "qazaidi123/frontimage"
     BACK_IMAGE = "qazaidi123/backimage"
-    FRONT_CONTAINER = "optimize-front"
-    BACK_CONTAINER = "optimize-back"
+    FRONT_CONTAINER = "optimize_front"
+    BACK_CONTAINER = "optimize_back"
     IMAGE_TAG = "${BUILD_NUMBER}"
     DOCKER_CREDS = credentials('dockerhub-creds')
     

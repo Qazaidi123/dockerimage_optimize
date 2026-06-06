@@ -35,7 +35,7 @@ The goal is to reduce:
 - Image layer size : 28.4 MB  (First Layer: debian.sh --arch 'amd64' out/) , 
 - Disk usage in EC2: 161 MB
 
-# Backend Dockerfile without apine --> php:8.2  (Image name: qazaidi123/backimage:2) 
+# Backend Dockerfile without apine --> php:8.2  (Image name: qazaidi123/backimage:12) 
 - Total Image size: 171.35 MB ,     
 - Image layer size : 28.4 MB  (First Layer: debian.sh --arch 'amd64' out/) , 
 - Disk usage in EC2: 525 MB

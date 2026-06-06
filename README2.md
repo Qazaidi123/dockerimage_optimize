@@ -18,37 +18,32 @@ The goal is to reduce:
 
 # (1) Optimization - Alpine Images
 
-# Frontend Dockerfile with nginx:alpine (Image name: qazaidi123/frontimage:1) 
-- Total Image size: 24.83 MB , 
-- Image layer size : 3.69 MB  (First Layer: ADD alpine-minirootfs-3.23.4-x86_64.tar.gz / # buildkit) , 
-- Disk usage in EC2: 62.3 MB
-
-
-# Backend Dockerfile with php:8.2-cli-alpine (Image name: qazaidi123/backimage:1) 
-- Total Image size: 35.18 MB ,   
-- Image layer size : 3.69 MB  (First Layer: ADD alpine-minirootfs-3.23.4-x86_64.tar.gz / # buildkit) , 
-- Disk usage in EC2: 100 MB
-
-
-# Frontend Dockerfile without alpine --> nginx:latest (Image name: qazaidi123/frontimage:2) 
-- Total Image size: 60.18 MB , 
-- Image layer size : 28.4 MB  (First Layer: debian.sh --arch 'amd64' out/) , 
+# Frontend Dockerfile with nginx:latest (Image name: qazaidi123/front_opt:2)
+- Total Image size: 60.18 MB ,  
 - Disk usage in EC2: 161 MB
 
-# Backend Dockerfile without apine --> php:8.2  (Image name: qazaidi123/backimage:12) 
-- Total Image size: 171.35 MB ,     
-- Image layer size : 28.4 MB  (First Layer: debian.sh --arch 'amd64' out/) , 
+
+# Backend Dockerfile with php:8.2 (Image name: qazaidi123/back_opt:2) 
+- Total Image size: 171.35 MB ,   
 - Disk usage in EC2: 525 MB
 
+
+# Frontend Dockerfile nginx:alpine (Image name: qazaidi123/front_opt:3 )
+- Total Image size: 24.83 MB, 
+- Disk usage in EC2: 62.3 MB
+
+# Backend Dockerfile php:8.2-cli-alpine  (Image name: qazaidi123/back_opt:3) 
+- Total Image size: 35.18 MB ,     
+- Disk usage in EC2: 100 MB
+
 # Pipeline run-time comparison
-- Image build stage from Dockerfile with alpine images:    857ms , 
-- Image build stage from Dockerfile without alpine images: 20s , 
-- Total Time consumption by pipeline with alpine image: 23s , 
-- Total Time consumption by pipeline without alpine image: 39s , 
+- Image build stage from Dockerfile with alpine images: 10 sec    , 
+- Image build stage from Dockerfile without alpine images: 18 sec , 
+ 
 
 Note:
 
-Since the application is intentionally lightweight for learning purposes, the runtime difference is moderate. In large-scale production projects, Alpine images can significantly reduce pipeline execution time and storage usage.
+Since the application is intentionally lightweight for learning purposes, the runtime difference in image build is moderate. In large-scale production projects, Alpine images can significantly reduce pipeline execution time and storage usage.
 
 # (2) By Parellalization i.e Parellal jenkins stages (Very Effective):
 Jenkins Pipeline optimization is also done by parellel run of independent stages. 
